@@ -15,3 +15,4 @@ $factory->define(Product::class, function (Faker $faker) {
         $product->stock = mb_convert_encoding($row[8], 'utf8', 'cp1251');
     ];
 });
+
