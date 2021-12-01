@@ -33,3 +33,4 @@ class CreateGalleries extends Migration
         Schema::dropIfExists('galleries');
     }
 }
+
