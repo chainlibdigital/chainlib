@@ -39,3 +39,4 @@ class CreateCountriesTranslationTable extends Migration
         Schema::dropIfExists('countries_translation');
     }
 }
+
