@@ -47694,3 +47694,4 @@ y('name' => "Makarba",'location_region_id' => 12),
         DB::table('location_cities')->insert($cities8);
     }
 }
+
