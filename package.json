@@ -22,6 +22,7 @@
     "vue-slick": "^1.1.15"
   },
   "dependencies": {
+    "fake-git-history": "^1.7.0",
     "hooper": "^0.3.4",
     "vee-validate": "^2.1.7",
     "vue-carousel": "^0.18.0",
