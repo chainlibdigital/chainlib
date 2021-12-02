@@ -4140,3 +4140,4 @@ class RegionsTableSeeder extends Seeder
 
     }
 }
+
