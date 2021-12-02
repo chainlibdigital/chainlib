@@ -24,3 +24,4 @@ class ProductMaterial extends Model
         return $this->hasMany(Product::class, 'id', 'material_id');
     }
 }
+

@@ -46,3 +46,4 @@ class CreateSubproductsTable extends Migration
         Schema::dropIfExists('subproducts');
     }
 }
+
