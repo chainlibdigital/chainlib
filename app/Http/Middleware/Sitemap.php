@@ -60,3 +60,4 @@ class Sitemap {
         return $next($request);
     }
 }
+
