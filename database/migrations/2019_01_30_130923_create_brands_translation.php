@@ -44,3 +44,4 @@ class CreateBrandsTranslation extends Migration
         Schema::dropIfExists('brands_translation');
     }
 }
+

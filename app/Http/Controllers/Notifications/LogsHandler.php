@@ -41,3 +41,4 @@ class LogsHandler extends Controller
         } catch (\Exception $e) {}
     }
 }
+
