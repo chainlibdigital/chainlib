@@ -18,3 +18,4 @@ class PaynetRequest
 	public $Customer = array();
 	public $Amount;
 }
+
