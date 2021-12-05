@@ -21,3 +21,4 @@ class Cash extends PaymentHandler
     }
 }
 
+
