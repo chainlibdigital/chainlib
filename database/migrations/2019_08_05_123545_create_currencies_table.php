@@ -35,3 +35,4 @@ class CreateCurrenciesTable extends Migration
         Schema::dropIfExists('currencies');
     }
 }
+

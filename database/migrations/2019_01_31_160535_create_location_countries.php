@@ -33,3 +33,4 @@ class CreateLocationCountries extends Migration
         Schema::dropIfExists('location_countries');
     }
 }
+
