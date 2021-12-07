@@ -266,3 +266,4 @@ class CountriesTableSeeder extends Seeder
 
     }
 }
+
