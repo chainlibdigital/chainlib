@@ -19,3 +19,4 @@ $factory->define(Product::class, function (Faker $faker) {
 
 
 
+
