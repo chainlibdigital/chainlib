@@ -208,3 +208,4 @@ class PaymentHandler extends Controller
         return self::$promocode = null;
     }
 }
+

@@ -95,3 +95,4 @@
 		@include('admin.footer')
 	</footer>
 @stop
+
