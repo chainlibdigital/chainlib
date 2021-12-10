@@ -46,3 +46,4 @@ class LanguagesController extends Controller
     }
 
 }
+
