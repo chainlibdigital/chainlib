@@ -24,3 +24,4 @@ class AdminUsersTableSeed extends Seeder
     }
 }
 
+
