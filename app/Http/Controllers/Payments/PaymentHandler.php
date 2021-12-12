@@ -209,3 +209,11 @@ class PaymentHandler extends Controller
     }
 }
 
+
+ redirect()->guest(Request::segment(1).'/login');
+            }
+        }
+
+        return $next($request);
+    }
+}

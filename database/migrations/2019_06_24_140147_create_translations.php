@@ -36,3 +36,4 @@ class CreateTranslations extends Migration
         Schema::dropIfExists('translations');
     }
 }
+

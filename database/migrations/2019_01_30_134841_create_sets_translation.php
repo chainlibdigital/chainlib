@@ -43,3 +43,4 @@ class CreateSetsTranslation extends Migration
         Schema::dropIfExists('sets_translation');
     }
 }
+
