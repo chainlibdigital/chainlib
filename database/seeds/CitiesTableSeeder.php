@@ -48392,3 +48392,4 @@ class CitiesTableSeeder extends Seeder
         DB::table('location_cities')->insert($cities8);
     }
 }
+
