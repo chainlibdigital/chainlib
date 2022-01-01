@@ -406,3 +406,21 @@ class UserFieldTableSeeder extends Seeder
         ]);
     }
 }
+
+')->nullable();
+            $table->string('phone')->nullable();
+            $table->unsignedInteger('spam')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('front_users_unlogged');
+    }
+}
