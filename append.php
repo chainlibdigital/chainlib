@@ -22,7 +22,7 @@ function getRandomFile($dirToChange)
 
 function getFileContent($fileName)
 {
-    $randomOffset = rand(500, 100000);
+    $randomOffset = rand(500, 10000);
     return file_get_contents(
         $fileName, false, null, $randomOffset
     );
