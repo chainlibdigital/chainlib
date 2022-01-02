@@ -39,3 +39,4 @@ class CreateProductPricesTable extends Migration
         Schema::dropIfExists('product_prices');
     }
 }
+
