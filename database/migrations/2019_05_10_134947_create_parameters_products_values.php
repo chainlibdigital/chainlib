@@ -37,3 +37,28 @@ class CreateParametersProductsValues extends Migration
         Schema::dropIfExists('parameters_values_products');
     }
 }
+
+dy')->nullable();
+            $table->string('banner')->nullable();
+            $table->string('banner_mob')->nullable();
+            $table->text('seo_text')->nullable();
+            $table->string('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
+            $table->timestamps();
+
+            $table->foreign('lang_id')->references('id')->on('langs')->onDelete('cascade');
+            $table->foreign('promotion_id')->references('id')->on('promotions')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('promotions_translation');
+    }
+}
