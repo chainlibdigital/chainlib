@@ -48,3 +48,4 @@ class CustomAuthController extends Controller
         return redirect('/back');
     }
 }
+
