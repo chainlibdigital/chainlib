@@ -44,3 +44,4 @@ class CreateCollectionsTranslation extends Migration
         Schema::dropIfExists('collections_translation');
     }
 }
+
