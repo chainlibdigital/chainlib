@@ -36,3 +36,4 @@ class CreateOauthClientsTable extends Migration
         Schema::dropIfExists('oauth_clients');
     }
 }
+

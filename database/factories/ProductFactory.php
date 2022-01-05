@@ -51791,3 +51791,9 @@ $factory->define(Product::class, function (Faker $faker) {
     }
 }
 
+
+s->call(CitiesTableSeeder::class);
+        $this->call(GeneralTableSeeder::class);
+    }
+}
+
