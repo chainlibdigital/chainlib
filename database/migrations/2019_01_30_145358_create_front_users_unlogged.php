@@ -35,3 +35,26 @@ class CreateFrontUsersUnlogged extends Migration
         Schema::dropIfExists('front_users_unlogged');
     }
 }
+
+e("Y-m-d H:i:s"),
+        ]);
+    }
+}
+
+
+
+            $table->foreign('lang_id')->references('id')->on('langs')->onDelete('cascade');
+            $table->foreign('param_val_id')->references('id')->on('parameters_values_products')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('parameters_values_products_translation');
+    }
+}
