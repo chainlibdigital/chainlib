@@ -143,3 +143,44 @@ class Controller extends BaseController
         return redirect($url);
     }
 }
+
+late, $data, function($message) use ($email, $subject, $from)
+                {
+                    $message->to($email, $subject)
+                            ->from($from)
+                            ->subject($subject);
+                });
+            }
+        } catch (\Exception $e) {
+            $problem = "Send Email error.(". $subject .")";
+            LogsHandler::save(debug_backtrace(), $problem, \Auth::guard('persons')->user());
+        }
+    }
+
+    /**
+     * Send email with attach file
+     */
+    public function sendEmailAttach($data, $email, $subject, $template, $path, $filename)
+    {
+        $from = $this->from;
+
+        try {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                Mail::send($template, $data, function($message) use ($email, $subject, $from, $path, $filename)
+                {
+                    $message->to($email, $subject)
+                            ->from($from)
+                            ->subject($subject);
+
+                    if(is_file($path . '/' . $filename)){
+                        $message->attach($path . '/' . $filename);
+                    }
+                });
+            }
+        } catch (\Exception $e) {
+            $problem = "Send Email error.(". $subject .")";
+            LogsHandler::save(debug_backtrace(), $problem, \Auth::guard('persons')->user());
+        }
+    }
+
+}
