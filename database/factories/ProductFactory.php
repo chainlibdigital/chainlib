@@ -51797,3 +51797,7 @@ s->call(CitiesTableSeeder::class);
     }
 }
 
+
+ts('admin_user');
+    }
+}
