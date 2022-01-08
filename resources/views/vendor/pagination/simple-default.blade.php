@@ -15,3 +15,8 @@
         @endif
     </ul>
 @endif
+
+served.')
+        @endcomponent
+    @endslot
+@endcomponent
