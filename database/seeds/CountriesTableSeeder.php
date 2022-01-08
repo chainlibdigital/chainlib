@@ -52366,3 +52366,4 @@ class CountriesTableSeeder extends Seeder
 
     }
 }
+
