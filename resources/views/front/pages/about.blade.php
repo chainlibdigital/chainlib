@@ -112,3 +112,25 @@
         height: 750px;
     }
 </style>
+                  </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 posrelative">
+                        <form action="{{ url('/'.$lang->lang.'/proposes-book') }}" method="post">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <p>Submit a Book Proposal</p>
+                            <textarea cols="30" rows="20" required name="message"
+                                      placeholder="Title and author of the book"></textarea>
+                            <input type="text" name="name" required
+                                   placeholder="Name"/>
+                            <input type="email" name="email" required
+                                   placeholder="Email"/>
+                            <input type="submit" value="Submit"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @include('front.partials.footer')
+@stop
+
