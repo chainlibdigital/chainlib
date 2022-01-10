@@ -475,3 +475,161 @@ function SelectCatsTree($lang_id, $id)
 //
 //     return true;
 // }
+
+ategoryArr, $temp->alias);
+//         }
+//       }
+//     }
+//     return implode('/', array_reverse($categoryArr));
+// }
+//
+// function hasParent($category_id) {
+//     $hasParent = DB::table('product_categories')
+//           ->where('id', $category_id)
+//           ->first();
+//     return $hasParent;
+// }
+
+function getContactInfo($title) {
+    $contactModel = new App\Models\Contact();
+    $row = $contactModel->where('title', $title)->first();
+    return $row;
+}
+
+function YoutubeID($url) {
+    if(strlen($url) > 11)
+    {
+        if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match))
+        {
+            return $match[1];
+        }
+        else
+            return false;
+    }
+
+    return $url;
+}
+
+function pathWithoutLang($path, $langs)
+{
+    $pathWithBar = '|'.$path;
+
+    if (!empty($langs)) {
+        foreach ($langs as $key => $lang) {
+            if (strpos($pathWithBar, '|'.$lang->lang) !== false) {
+                return substr($path, 3);
+            } else {
+                continue;
+            }
+        }
+    }
+}
+
+function getProducts()
+{
+    $productModel = new App\Models\Product();
+    $row = $productModel::all();
+    return $row;
+}
+
+function checkProductsSimilar($product_id, $category_id) {
+  $row = DB::table('similar_products')
+        ->where('product_id', $product_id)
+        ->where('category_id', $category_id)
+        ->first();
+
+  if(count($row) > 0) {
+    return true;
+  }
+  return false;
+}
+
+function isMobile() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
+
+function getProductLink($categoryId)
+{
+  $subcat = DB::table('product_categories')
+      ->select('alias', 'parent_id')
+      ->where('id', $categoryId)
+      ->first();
+
+  if(!is_null($subcat)) {
+      $cat = DB::table('product_categories')
+          ->select('alias')
+          ->where('id', $subcat->parent_id)
+          ->first();
+
+      if(!is_null($cat)) {
+         return $cat->alias.'/'.$subcat->alias.'/';
+      }else{
+          return $subcat->alias.'/';
+      }
+  }
+
+  return false;
+}
+
+function getSubcats($categoryId, $langId)
+{
+    $table = "product_categories";
+
+    $row = DB::table($table)
+        ->join('product_categories_translation', 'product_categories_translation.product_category_id', '=', $table . '.id')
+        ->where('lang_id', $langId)
+        ->where('parent_id', $categoryId)
+        ->get();
+
+    if (!is_null($row)) {
+        return $row;
+    }
+
+    return false;
+}
+
+function getParamCategory($param, $categ)
+{
+    $table = "subproduct_properties";
+
+    $row = DB::table($table)
+        ->where('product_category_id', $categ)
+        ->where('property_id', $param)
+        ->first();
+
+    if (!is_null($row)) {
+        return $row;
+    }
+
+    return null;
+}
+
+
+// function getLangById($langId) {
+//     $table = "langs";
+//
+//     $row = DB::table($table)
+//         ->where('id', $langId)
+//         ->first();
+//
+//     if (!is_null($row)) {
+//         return $row;
+//     }
+//
+//     return null;
+// }
+
+
+
+// function SelectCollectionsTree($lang_id)
+// {
+//     $collections = DB::table('collections_translation')
+//         ->join('collections', 'collections_translation.collection_id', '=', 'collections.id')
+//         ->where('lang_id', $lang_id)
+//         ->orderBy('position', 'asc')
+//         ->get();
+//
+//     return $collections ?? null;
+// }
+
+?>
