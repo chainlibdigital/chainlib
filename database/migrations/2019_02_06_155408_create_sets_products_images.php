@@ -38,3 +38,4 @@ class CreateSetsProductsImages extends Migration
         Schema::dropIfExists('set_product_images');
     }
 }
+
