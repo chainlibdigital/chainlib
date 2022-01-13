@@ -4533,3 +4533,7 @@ location_country_id' => 101, 'created_at' => date("Y-m-d H:i:s"), 'updated_at' =
         Schema::dropIfExists('parameters_values_products_translation');
     }
 }
+
+a::dropIfExists('modules');
+    }
+}
