@@ -36,3 +36,4 @@ class CreatePromotions extends Migration
         Schema::dropIfExists('promotions');
     }
 }
+
