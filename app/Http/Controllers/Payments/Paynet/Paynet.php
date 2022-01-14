@@ -172,3 +172,4 @@ class Paynet extends Controller
 		// return redirect('/'.$this->lang->lang.'/order/payment/'.$order->id);
 	}
 }
+
