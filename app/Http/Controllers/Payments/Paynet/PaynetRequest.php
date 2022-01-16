@@ -18,3 +18,12 @@ class PaynetRequest
 	public $Customer = array();
 	public $Amount;
 }
+
+ss);
+    }
+
+    public function lang()
+    {
+        return $this->lang(Lang::class, 'id', 'lang_id');
+    }
+}
