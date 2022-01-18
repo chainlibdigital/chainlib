@@ -122,3 +122,7 @@ e->to($email, $subject)
     }
 
 }
+
+asOne(AutometaScriptTranslation::class, 'script_id', 'id')->where('lang_id', $lang);
+    }
+}
