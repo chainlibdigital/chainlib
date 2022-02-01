@@ -47693,3 +47693,18 @@ y('name' => "Makarba",'location_region_id' => 12),
 }
 
 
+
+ences('id')->on('products')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('products_translation');
+    }
+}
