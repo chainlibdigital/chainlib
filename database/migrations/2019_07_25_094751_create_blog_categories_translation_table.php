@@ -44,3 +44,4 @@ class CreateBlogCategoriesTranslationTable extends Migration
         Schema::dropIfExists('blog_categories_translation');
     }
 }
+
