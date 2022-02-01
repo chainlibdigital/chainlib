@@ -42,3 +42,4 @@ class CreateCrmOrdersTable extends Migration
         Schema::dropIfExists('crm_orders');
     }
 }
+
