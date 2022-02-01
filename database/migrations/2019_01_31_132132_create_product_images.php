@@ -37,3 +37,4 @@ class CreateProductImages extends Migration
         Schema::dropIfExists('product_images');
     }
 }
+
