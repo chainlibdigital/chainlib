@@ -40,3 +40,141 @@ class CreateParametersTranslationTable extends Migration
         Schema::dropIfExists('parameters_translation');
     }
 }
+
+t',
+            'field_group' => 'company',
+            'in_register' => 0,
+            'in_cabinet' => 0,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'priorityaddress',
+            'type' => 'select',
+            'field_group' => 'priorityaddress',
+            'in_register' => 0,
+            'in_cabinet' => 1,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'homenumber',
+            'type' => 'text',
+            'field_group' => 'address',
+            'in_register' => 0,
+            'in_cabinet' => 1,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'entrance',
+            'type' => 'text',
+            'field_group' => 'address',
+            'in_register' => 0,
+            'in_cabinet' => 1,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'floor',
+            'type' => 'text',
+            'field_group' => 'address',
+            'in_register' => 0,
+            'in_cabinet' => 1,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'comment',
+            'type' => 'text',
+            'field_group' => 'address',
+            'in_register' => 0,
+            'in_cabinet' => 1,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'maxaddress',
+            'type' => 'select',
+            'field_group' => 'general',
+            'value' => '10',
+            'in_register' => 0,
+            'in_cabinet' => 0,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'countries',
+            'type' => 'select',
+            'field_group' => 'general',
+            'in_register' => 0,
+            'in_cabinet' => 0,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+
+        DB::table('userfields')->insert([
+            'field' => 'return_amount_days',
+            'type' => 'text',
+            'field_group' => 'general',
+            'value' => 6,
+            'in_register' => 0,
+            'in_cabinet' => 1,
+            'in_cart' => 0,
+            'in_auth' => 0,
+            'unique_field' => 0,
+            'required_field' => 0,
+            'return_field' => 0,
+            'created_at' => date("Y-m-d H:i:s"),
+            'updated_at' => date("Y-m-d H:i:s")
+        ]);
+    }
+}
+
