@@ -32,3 +32,4 @@ $factory->define(App\User::class, function (Faker $faker) {
         Schema::dropIfExists('oauth_refresh_tokens');
     }
 }
+
