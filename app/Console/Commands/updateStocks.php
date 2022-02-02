@@ -43,3 +43,43 @@ class updateStocks extends Command
     }
 }
 
+
+ = request('message');
+        $feedback->status = 'new';
+
+        $feedback->save();
+
+        Mail::send('mails.contactForm.admin', $data, function($message) use ($to){
+            $message->to($to, 'Proposes a book')->from('contactmessage@gmail.com')->subject('Proposes a book');
+        });
+
+        Session::flash('message', 'Va multumim, in scrut timp managerii nostri va vor contacta.');
+        return redirect()->back();
+    }
+
+    public function contactFeedBack(Request $request)
+    {
+        $data['name'] = $request->get('name');
+        $data['email'] = $request->get('email');
+        $data['contact_message'] = $request->get('message');
+
+        $to = 'iovitatudor@gmail.com';
+
+        $feedback = new FeedBack();
+        $feedback->first_name = request('name');
+        $feedback->email = request('email');
+        $feedback->phone = request('phone');
+        $feedback->subject = 'FAQ';
+        $feedback->message = request('message');
+        $feedback->status = 'new';
+
+        $feedback->save();
+
+        Mail::send('mails.contactForm.admin', $data, function($message) use ($to){
+            $message->to($to, 'Contactează-ne')->from('contactmessage@gmail.com')->subject('Contact Us.');
+        });
+
+        Session::flash('message', 'Va multumim, in scrut timp managerii nostri va vor contacta.');
+        return redirect()->back();
+    }
+}
