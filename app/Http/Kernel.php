@@ -68,3 +68,4 @@ class Kernel extends HttpKernel
         'sitemap' => \App\Http\Middleware\Sitemap::class
     ];
 }
+
