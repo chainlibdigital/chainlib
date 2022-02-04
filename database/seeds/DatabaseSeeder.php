@@ -22,3 +22,11 @@ class DatabaseSeeder extends Seeder
         $this->call(GeneralTableSeeder::class);
     }
 }
+
+urn void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('oauth_personal_access_clients');
+    }
+}
