@@ -43,3 +43,20 @@ class GeneralTableSeeder extends Seeder
         }
     }
 }
+
+tring('treshold')->nullable();
+            $table->string('period')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('promocode_types');
+    }
+}
