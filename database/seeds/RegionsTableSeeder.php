@@ -4140,3 +4140,24 @@ class RegionsTableSeeder extends Seeder
 
     }
 }
+
+$table->unsignedInteger('product_image_id')->nullable();
+            $table->string('alt')->nullable();
+            $table->string('title')->nullable();
+            $table->timestamps();
+
+            $table->foreign('lang_id')->references('id')->on('langs')->onDelete('cascade');
+            $table->foreign('product_image_id')->references('id')->on('product_images')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('product_images_translation');
+    }
+}
