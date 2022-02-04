@@ -42,3 +42,4 @@ class updateStocks extends Command
         $frisbo->synchronizeStocks();
     }
 }
+

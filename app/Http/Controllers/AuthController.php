@@ -286,3 +286,4 @@ class AuthController extends Controller
         return $data;
     }
 }
+
