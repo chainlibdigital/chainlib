@@ -58,3 +58,33 @@
 </div>
 @include('front.partials.footer')
 @stop
+
+width:150px;margin-left:0}ul{display:block;padding-left:17px;list-style:none}ul a,ul li{font-family:'Source Sans Pro';font-size:18px;color:#2f2f2f;letter-spacing:-.05px;text-align:left;line-height:25px;margin:0;list-style:none}
+        </style>
+    </head>
+    <body>
+        <div class="email-container">
+            <div class="userName">{{ trans('vars.Email-templates.emailBodyHello') }}  {{ $name }}</div>
+            <p>
+                {{ trans('vars.Email-templates.emailRegistrationSubject') }} soledy.com
+            </p>
+            <p class="miss">
+                {{ trans('vars.Email-templates.emailBodyNewInOutlet') }}
+            </p>
+            <div class="buttGroups">
+                <a class="butt" href="{{ url('/en/homewear/catalog/all') }}">{{ trans('vars.General.HomewearStore') }}</a>
+                <a class="butt" href="{{ url('/en/bijoux/catalog/all') }}">{{ trans('vars.General.BijouxBoutique') }}</a>
+            </div>
+            <p class="ignore">
+                {{ trans('vars.Email-templates.emailBodyIgnoreMessage') }}
+            </p>
+            <p style="text-align: left">{{ trans('vars.Email-templates.emailBodySignature') }}</p>
+            <ul class="info">
+                <li>{{ trans('vars.General.brandName') }}</li>
+                <li>{{ trans('vars.FormFields.fieldEmail') }}: {{ trans('vars.Contacts.queriesPaymentShippingReturnsEmail') }}</li>
+                <li>{{ trans('vars.FormFields.fieldphone') }}: {{ trans('vars.Contacts.queriesPaymentShippingReturnsPhone') }}</li>
+                <li>Facebook: {{ trans('vars.Contacts.facebook') }}</li>
+            </ul>
+        </div>
+    </body>
+</html>
