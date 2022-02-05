@@ -410,3 +410,4 @@ me' => $faker->name,
         Schema::dropIfExists('oauth_refresh_tokens');
     }
 }
+
