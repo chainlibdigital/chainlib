@@ -57,3 +57,4 @@ class CreateAutometas extends Migration
         Schema::dropIfExists('autometas');
     }
 }
+

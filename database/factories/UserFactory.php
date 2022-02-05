@@ -47708,3 +47708,4 @@ ences('id')->on('products')->onDelete('cascade');
         Schema::dropIfExists('products_translation');
     }
 }
+
