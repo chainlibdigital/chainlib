@@ -85,3 +85,4 @@ class ContactsTablesSeeder extends Seeder
         }
     }
 }
+
