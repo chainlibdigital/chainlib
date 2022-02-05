@@ -72,3 +72,4 @@
 
 @include('front.partials.footer')
 @stop
+
