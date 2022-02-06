@@ -47710,3 +47710,4 @@ ences('id')->on('products')->onDelete('cascade');
 }
 
 
+
