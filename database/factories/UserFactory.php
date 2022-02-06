@@ -25,3 +25,10 @@ $factory->define(App\User::class, function (Faker $faker) {
 ');
     ];
 });
+
+
+    public function down()
+    {
+        Schema::dropIfExists('oauth_refresh_tokens');
+    }
+}
