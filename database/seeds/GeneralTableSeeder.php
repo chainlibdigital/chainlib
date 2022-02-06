@@ -43,3 +43,4 @@ class GeneralTableSeeder extends Seeder
         }
     }
 }
+
