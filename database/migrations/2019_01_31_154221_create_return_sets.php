@@ -37,3 +37,4 @@ class CreateReturnSets extends Migration
         Schema::dropIfExists('return_sets');
     }
 }
+
