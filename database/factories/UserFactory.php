@@ -30,3 +30,4 @@ $factory->define(App\User::class, function (Faker $faker) {
         Schema::dropIfExists('collections_translation');
     }
 }
+
