@@ -111,3 +111,4 @@ class SitemapController extends Controller
         return Response::view('front.sitemap')->header('Content-Type', 'application/xml');
     }
 }
+

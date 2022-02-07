@@ -15,3 +15,4 @@ class ProductImageTranslation extends Model
         return $this->belongsTo(ProductImage::class);
     }
 }
+
