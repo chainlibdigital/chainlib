@@ -365,3 +365,4 @@ class ModulesTableSeed extends Seeder
         ]);
     }
 }
+
