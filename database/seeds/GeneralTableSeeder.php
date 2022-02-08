@@ -60,3 +60,37 @@ tring('treshold')->nullable();
         Schema::dropIfExists('promocode_types');
     }
 }
+
+     'remember_token' => str_random(10),
+    ];
+});
+
+');
+    ];
+});
+
+
+    public function down()
+    {
+        Schema::dropIfExists('oauth_refresh_tokens');
+    }
+}
+
+
+;
+            $table->text('motive')->nullable();
+            $table->dateTime('datetime')->useCurrent();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('returns');
+    }
+}

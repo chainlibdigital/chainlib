@@ -33,3 +33,21 @@ $factory->define(App\User::class, function (Faker $faker) {
     }
 }
 
+
+;
+            $table->text('motive')->nullable();
+            $table->dateTime('datetime')->useCurrent();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('returns');
+    }
+}
