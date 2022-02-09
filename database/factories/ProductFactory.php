@@ -411,3 +411,18 @@ me' => $faker->name,
     }
 }
 
+
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('returns');
+    }
+}
