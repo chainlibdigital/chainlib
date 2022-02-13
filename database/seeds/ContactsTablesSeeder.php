@@ -85,3 +85,10 @@ class ContactsTablesSeeder extends Seeder
         }
     }
 }
+
+function down()
+    {
+        Schema::dropIfExists('return_sets');
+    }
+}
+
