@@ -426,3 +426,29 @@ me' => $faker->name,
         Schema::dropIfExists('returns');
     }
 }
+
+ng('region')->nullable();
+            $table->string('location')->nullable();
+            $table->string('address')->nullable();
+            $table->string('code')->nullable();
+            $table->string('homenumber')->nullable();
+            $table->string('entrance')->nullable();
+            $table->string('floor')->nullable();
+            $table->string('apartment')->nullable();
+            $table->string('comment')->nullable();
+            $table->timestamps();
+
+            $table->foreign('front_user_id')->references('id')->on('front_users')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('front_user_addresses');
+    }
+}
