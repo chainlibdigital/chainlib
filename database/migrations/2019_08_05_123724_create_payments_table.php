@@ -33,3 +33,24 @@ class CreatePaymentsTable extends Migration
         Schema::dropIfExists('deliveries');
     }
 }
+
+            $table->decimal('price', 8, 2)->nullable();
+            $table->decimal('old_price', 8, 2)->nullable();
+            $table->boolean('dependable')->default(1);
+            $table->timestamps();
+
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('currency_id')->references('id')->on('currencies')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('product_prices');
+    }
+}
