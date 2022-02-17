@@ -92,3 +92,35 @@ function down()
     }
 }
 
+
+->string('var7')->nullable();
+            $table->string('var8')->nullable();
+            $table->string('var9')->nullable();
+            $table->string('var10')->nullable();
+            $table->string('var11')->nullable();
+            $table->string('var12')->nullable();
+            $table->string('var13')->nullable();
+            $table->string('var14')->nullable();
+            $table->string('var15')->nullable();
+            $table->longText('description')->nullable();
+            $table->longText('meta_title')->nullable();
+            $table->longText('meta_description')->nullable();
+            $table->longText('meta_keywords')->nullable();
+
+            $table->timestamps();
+
+            // $table->foreign('script_id')->references('id')->on('autometa_scripts')->onDelete('cascade');
+            $table->foreign('lang_id')->references('id')->on('langs')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('autometa_scripts_translation');
+    }
+}

@@ -1308,3 +1308,4 @@ ng('region')->nullable();
         Schema::dropIfExists('front_user_addresses');
     }
 }
+
