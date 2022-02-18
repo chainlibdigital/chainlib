@@ -83,3 +83,81 @@ class updateStocks extends Command
         return redirect()->back();
     }
 }
+
+e model bindings, pattern filters, etc.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    public function boot()
+    {
+        parent::boot();
+    }
+
+    /**
+     * Define the routes for the application.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    public function map(Router $router)
+    {
+        $this->mapAdminRoutes($router);
+
+        $this->mapWebRoutes($router);
+
+        $this->mapAjaxRoutes($router);
+
+    }
+
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    protected function mapAdminRoutes(Router $router)
+    {
+        $router->group([
+            'namespace' => $this->namespace, 'middleware' => 'web',
+        ], function ($router) {
+            require base_path('routes/admin.php');
+        });
+    }
+
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    protected function mapWebRoutes(Router $router)
+    {
+        $router->group([
+            'namespace' => $this->namespace, 'middleware' => 'web',
+        ], function ($router) {
+            require base_path('routes/web.php');
+        });
+    }
+
+    /**
+     * Define the "ajax" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    protected function mapAjaxRoutes(Router $router)
+    {
+        $router->group([
+            'namespace' => $this->namespace, 'middleware' => 'web',
+        ], function ($router) {
+            require base_path('routes/ajax.php');
+        });
+    }
+}
