@@ -38,3 +38,7 @@ class CreateParameterValuesTranslationTable extends Migration
         Schema::dropIfExists('parameter_values_translation');
     }
 }
+
+s('oauth_personal_access_clients');
+    }
+}
