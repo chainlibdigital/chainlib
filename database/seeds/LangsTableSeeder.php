@@ -31,3 +31,8 @@ class LangsTableSeeder extends Seeder
         ]);
     }
 }
+
+"Y-m-d H:i:s"),
+        ]);
+    }
+}
