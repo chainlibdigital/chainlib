@@ -1386,3 +1386,4 @@ tring('treshold')->nullable();
         Schema::dropIfExists('returns');
     }
 }
+
