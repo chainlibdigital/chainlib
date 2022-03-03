@@ -374,3 +374,4 @@ class CheckoutController extends Controller
         return array('is_logged' => 1, 'user_id' => auth('persons')->id(), 'status' => 'auth');
     }
 }
+
