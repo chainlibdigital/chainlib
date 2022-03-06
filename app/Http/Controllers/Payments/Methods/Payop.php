@@ -66,3 +66,4 @@ class Payop extends PaymentHandler
         return redirect('https://payop.com/en/payment/invoice-preprocessing/'.$invoceId->data);
     }
 }
+
