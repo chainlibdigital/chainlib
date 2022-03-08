@@ -37,3 +37,4 @@ class CreatePromocodeTypes extends Migration
     }
 }
 
+
