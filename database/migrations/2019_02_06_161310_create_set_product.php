@@ -36,3 +36,4 @@ class CreateSetProduct extends Migration
         Schema::dropIfExists('set_product');
     }
 }
+
