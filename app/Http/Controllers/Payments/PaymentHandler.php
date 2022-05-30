@@ -208,3 +208,16 @@ class PaymentHandler extends Controller
         return self::$promocode = null;
     }
 }
+
+
+ redirect()->guest(Request::segment(1).'/login');
+            }
+        }
+
+        return $next($request);
+    }
+}
+
+
+
+

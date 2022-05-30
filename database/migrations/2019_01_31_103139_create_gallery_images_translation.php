@@ -39,3 +39,4 @@ class CreateGalleryImagesTranslation extends Migration
         Schema::dropIfExists('gallery_images_translation');
     }
 }
+

@@ -42,3 +42,4 @@ class CreateFeedBack extends Migration
         Schema::dropIfExists('feed_back');
     }
 }
+

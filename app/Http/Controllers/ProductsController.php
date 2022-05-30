@@ -692,3 +692,4 @@ class ProductsController extends Controller
         return $seo;
     }
 }
+

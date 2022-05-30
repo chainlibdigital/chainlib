@@ -11,3 +11,4 @@ class PaynetCode
 	const USERNAME_OR_PASSWORD_WRONG = 3;
 	const CONNECTION_ERROR = 12;
 }
+

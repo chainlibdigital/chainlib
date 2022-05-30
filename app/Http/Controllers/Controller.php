@@ -143,3 +143,4 @@ class Controller extends BaseController
         return redirect($url);
     }
 }
+

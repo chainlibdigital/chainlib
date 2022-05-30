@@ -52,3 +52,7 @@
     </main>
     @include('front.partials.footer')
 @stop
+
+
+
+

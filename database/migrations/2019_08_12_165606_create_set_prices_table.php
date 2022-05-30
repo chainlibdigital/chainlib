@@ -39,3 +39,4 @@ class CreateSetPricesTable extends Migration
         Schema::dropIfExists('set_prices');
     }
 }
+

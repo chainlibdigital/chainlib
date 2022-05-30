@@ -36,3 +36,5 @@ class CreatePromocodeTypes extends Migration
         Schema::dropIfExists('promocode_types');
     }
 }
+
+

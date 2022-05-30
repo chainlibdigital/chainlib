@@ -40,14 +40,8 @@ $rand = rand(1, 5);
 echo $rand;
 
 for ($i=0; $i<=$rand; $i++) {
-    $dirList = ['api', 'pages', 'components'];
-    $currentDir = $dirList[rand(0, count($dirList) - 1)];
-    $allDirectories = scanAllDir($currentDir);
-
-    if (!$allDirectories) {
-        $allDirectories = [$currentDir];
-    }
-    var_dump($allDirectories);
+    $dirList = ['app', 'resources/views', 'database'];
+    $allDirectories = scanAllDir($dirList[rand(0, count($dirList) - 1)]);
 
     shuffle($allDirectories);
     $directory = $allDirectories[0] . '/';
@@ -62,12 +56,7 @@ for ($i=0; $i<=$rand; $i++) {
     $file = $files[0];
     if (!is_dir($directory . $file)) {
         $randomFile = getRandomFile($dirToChange);
-        if (!$randomFile) continue;
-        if ((pathinfo($directory . $file)['extension'] === 'js' &&
-                pathinfo($randomFile)['extension'] === 'js') ||
-            (pathinfo($directory . $file)['extension'] === 'vue' &&
-                pathinfo($randomFile)['extension'] === 'vue')
-        ) {
+        if (pathinfo($directory . $file)['extension'] === 'php' && pathinfo($randomFile)['extension'] === 'php') {
             $content = getFileContent($directory . $file);
             appendContent($randomFile, $content);
         }
