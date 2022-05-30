@@ -38,3 +38,4 @@ class CreateCartSets extends Migration
         Schema::dropIfExists('cart_sets');
     }
 }
+
