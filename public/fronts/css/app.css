@@ -97,6 +97,7 @@ ul {
 
 a {
   color: #42261D;
+  border: none;
 }
 
 a:focus {
