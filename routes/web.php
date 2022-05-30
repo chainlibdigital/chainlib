@@ -34,6 +34,7 @@ Route::group(['prefix' => $prefix], function() use ($types)  {
     Route::get('/oops', 'PagesController@getOopsPage')->name('oops');
     Route::get('/cart',  'CartController@index')->name('cart');
     Route::get('/wish',  'WishListController@index');
+    Route::get('/wish-list',  'WishListController@indexList');
 
     // order
     Route::get('/order', 'CheckoutController@renderCheckoutShipping')->name('order');
